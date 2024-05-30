@@ -9,9 +9,9 @@
                 <p class="text-gray-600">Oficio: {{ $contact->oficio }}</p>
                 <p class="text-gray-600">Apodo: {{ $contact->apodo }}</p>
             </div>
-            <div>
+            <div class="w-48 flex-shrink-0">
                 @if($contact->imagen)
-                    <img class="img-fluid" src="{{ asset('storage/images/' . $contact->imagen) }}" alt="Imagen de {{ $contact->first_name }}">
+                    <img class="w-full h-auto object-cover rounded-lg" src="{{ asset('storage/images/' . $contact->imagen) }}" alt="Imagen de {{ $contact->first_name }}">
                 @else
                     <p class="text-gray-600">No hay imagen disponible</p>
                 @endif
